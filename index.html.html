@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Evéra
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <div class="header-center" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1rem;">
+    <h1 class="brand">
+     Ev’era
+    </h1>
+    <p class="tagline">
+     Your New Era Begins Here
+    </p>
+    <img alt="Evéra Logo" class="logo" src="evera_logo.png"/>
+   </div>
+  </header>
+  <main>
+   <!-- Planner -->
+   <section class="page" id="slide1" style="text-align: center;">
+    <h2>
+     Daily Planner
+    </h2>
+    <ul id="planner-list">
+    </ul>
+    <input id="planner-task" placeholder="Add a task" type="text"/>
+    <button onclick="addTask('planner')">
+     Add
+    </button>
+   </section>
+   <!-- Mood Tracker -->
+   <section class="page" id="slide2" style="text-align: center;">
+    <h2>
+     Your Daily Routine
+    </h2>
+    <h3>
+     Morning Routine
+    </h3>
+    <ul id="morning-list">
+    </ul>
+    <input id="morning-task" placeholder="Add a morning task" type="text"/>
+    <button onclick="addTask('morning')">
+     Add
+    </button>
+    <h3>
+     Night Routine
+    </h3>
+    <ul id="night-list">
+    </ul>
+    <input id="night-task" placeholder="Add a night task" type="text"/>
+    <button onclick="addTask('night')">
+     Add
+    </button>
+   </section>
+   <section class="page" id="slide3" style="text-align: center;">
+    <h2>
+     Mood Tracker
+    </h2>
+    <label for="mood-select">
+     How do you feel?
+    </label>
+    <select id="mood-select">
+     <option value="">
+      Select mood
+     </option>
+     <option>
+      Happy
+     </option>
+     <option>
+      Calm
+     </option>
+     <option>
+      Motivated
+     </option>
+     <option>
+      Stressed
+     </option>
+     <option>
+      Sad
+     </option>
+    </select>
+    <label for="mood-notes" style="display: block; margin-top: 1rem; text-align: center; font-weight: bold;">
+     Why do you feel this way?
+    </label>
+    <textarea id="mood-notes" placeholder="Write your thoughts..."></textarea>
+   </section>
+   <!-- Journal & Game -->
+   <section class="page" id="slide5" style="text-align: center;">
+    <h2>
+     Journal &amp; Notes
+    </h2>
+    <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
+    <h2>
+     Choose Your Destiny
+    </h2>
+    <div id="bubble-game" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+     <div class="game-bubble" onclick="selectBubble(this)">
+      Peace
+     </div>
+     <div class="game-bubble" onclick="selectBubble(this)">
+      Power
+     </div>
+     <div class="game-bubble" onclick="selectBubble(this)">
+      Clarity
+     </div>
+     <div class="game-bubble" onclick="selectBubble(this)">
+      Joy
+     </div>
+     <div class="game-bubble" onclick="selectBubble(this)">
+      Focus
+     </div>
+    </div>
+    <div class="hidden" id="final-note">
+     Now, you decide your destiny.
+    </div>
+   </section>
+   <section class="page" id="slide6" style="text-align: center;">
+    <h2>
+     Create Your Profile
+    </h2>
+    <p>
+     Sign up to personalize your journey and receive daily updates.
+    </p>
+    <label for="name">
+     Full Name
+    </label>
+    <input id="name" name="name" placeholder="Full Name" type="text"/>
+    <label for="username">
+     Username
+    </label>
+    <input id="username" name="username" placeholder="Username" type="text"/>
+    <label for="email">
+     Email ID
+    </label>
+    <input id="email" name="email" placeholder="Email ID" type="text"/>
+    <label for="birthdate">
+     Birthdate
+    </label>
+    <input id="birthdate" name="birthdate" placeholder="Birthdate" type="date"/>
+    <button onclick="alert('Profile created!')">
+     Create Profile
+    </button>
+   </section>
+  </main>
+  <div class="navigation">
+   <button onclick="navigateSlide(-1)">
+    ←
+   </button>
+   <button onclick="navigateSlide(1)">
+    →
+   </button>
+  </div>
+  <footer>
+   <p>
+    © 2025 Evéra. All rights reserved.
+   </p>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
